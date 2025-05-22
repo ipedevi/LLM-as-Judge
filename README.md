@@ -7,18 +7,18 @@ Este proyecto implementa un evaluador automático de respuestas basado en LLM (L
 ## ⚙️ Requisitos
 
 - Python 3.9+
-- Clave API válida de OpenAI (con acceso a GPT-4o o modelos compatibles)
+- Clave API válida de OpenAI y de Gemini
 - Las siguientes librerías:
   ```bash
   pip install -r requirements.txt
 
 ## 🧩 Ejecución
 
-- Inicialmente debemos hacer la consulta "manualmente" y guardar los resultados en el archivo "data/input/pairs.jsonl" (en futuras versiones se hará automaticamente)
-- Devemos añadir la api key de openAi (que utilizamos como juez) en el archivo ".env" situado en raiz (podemos usar .env.example como ejemplo)
+- Debemos completar el archivo questions.jsonl con las preguntas y los LLMs a evaluar (actualmente solo Gemini vs ChatGPT)
+- Devemos añadir la api key de openAi y de Gemini en el archivo ".env" situado en raiz (podemos usar .env.example como ejemplo)
 - Con todo esto preparado podemos ejecutar nuestra prueba
   ```bash
   cd src
   
   python judge.py
- 
+- El resultado de esta prueba se mostrará en consola y se guardará en judge_results.jsonl 

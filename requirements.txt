@@ -4,3 +4,4 @@ pandas>=2.1.4
 tqdm>=4.66.2
 judges==0.0.10
 deepeval==2.9.1
+google-generativeai
